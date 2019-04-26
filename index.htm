@@ -1,0 +1,340 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Internship Portfolio</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+    body{
+        background: rgb(174,238,174);
+        background: linear-gradient(115deg, rgba(174,238,174,0.5) 0%, rgba(148,187,233,0.5) 100%);
+    }
+    img{
+        position: fixed;
+        display: flex;
+        left: 0;
+        right: 0;
+        margin: auto
+    }
+    ul{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        margin-top: 20%;
+        left: 0;
+        text-align: center;
+        justify-content: center;
+    }
+    li{
+        display: inline-flex;
+        justify-content: center;
+        font-size: 1.4em;
+        padding: 2%;
+        font-variant: small-caps;
+        transition-duration: 0.3s;
+    }
+    li:hover{
+        cursor: pointer;
+        color: #ffbf00;
+    }
+    #nextWrapper{
+        position:absolute;
+        top: 50%;
+        right: 10%;
+        vertical-align: middle;
+    }
+    #previousWrapper{
+        position:absolute;
+        top: 50%;
+        left: 10%;
+        vertical-align: middle;
+    }
+    #homeWrapper{
+        position:absolute;
+        top: 5%;
+        left: 10%;
+        vertical-align: middle;
+    }
+    #next{
+        background-color: white;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.3s;
+    }
+    #previous{
+        background-color: white;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.3s;
+    }
+    #home{
+        background-color: white;
+        border: none;
+        padding: 10px 22px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.3s;
+    }
+    #next:hover{
+        background-color: rgba(148,187,233,0.5);
+        color: white;
+    }
+    #previous:hover{
+        background-color: rgba(174,238,174,0.5);
+        color: white;
+    }
+    #home:hover{
+        background-color: rgba(174,238,174,0.5);
+        color: white;
+    }
+    .reportWrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    #evaluationWrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    #weeklyreportsWrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    #journalWrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    @media only screen and (max-width: 800px) {
+    .report{
+        width: 100%;
+    }
+    #next{
+        position: fixed;
+        right: 10%;
+        bottom: 0;
+        background-color:rgba(148,187,233,0.5);
+        opacity: 0.5;
+    }
+    #previous{
+        position: fixed;
+        left: 10%;
+        bottom: 0;
+        background-color:rgba(174,238,174,0.5);
+        opacity: 0.5;
+    }
+    #home{
+        position: fixed;
+        left: 2%;
+        background-color: white;
+        border: none;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        opacity: 0.8;
+    }
+    img{
+        position:absolute;
+        display: flex;
+        width: 10%;
+        left: 0;
+        right: 0;
+        margin: auto
+    }
+    ul{
+        height: 100%;
+        width: 75%;
+        text-align: center;
+    }
+    ul > li{
+        display: inline-block;
+        width: 100%;
+        padding-left: 0%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        font-size: 1em;
+        font-variant: small-caps;
+        transition-duration: 0.3s;
+        }
+    }
+  </style>
+</head>
+<body>
+    
+    <div id="main">
+        <img src="/home/deven/Documents/internship porfolio/Emblem-Color-web.png"/>
+        <nav>
+            <ul>
+                <li onclick="goals()">Goals</li>
+                <li onclick="reports()">Workbook Reports</li>
+                <li onclick="weekly()">Weekly Reports</li>
+                <li onclick="eval()">Student Evaluation</li>
+                <li onclick="journal()">Journals</li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="reports">
+        <div class="reportWrapper">
+            <object id="report1" class="report" data="/home/deven/Documents/internship porfolio/report1.pdf" type="application/pdf" width="50%" height="100%" ></object>
+            <object id="report2" class="report" data="/home/deven/Documents/internship porfolio/report2.pdf" type="application/pdf" width="50%" height="100%" ></object>
+            <object id="report3" class="report" data="/home/deven/Documents/internship porfolio/report3.pdf" type="application/pdf" width="50%" height="100%" ></object>
+        </div>
+    </div>
+    <div id="weeklyreports">
+        <div id="weeklyreportsWrapper">
+            <object class="report" data="/home/deven/Documents/internship porfolio/WeeklyReports.pdf" type="application/pdf" width="50%" height="100%" ></object>
+        </div>
+    </div>
+    <div id="journal">
+        <div id="journalWrapper">
+            <object class="report" data="/home/deven/Documents/internship porfolio/journal.pdf" type="application/pdf" width="50%" height="100%" ></object>
+        </div>
+    </div>
+        <div id="nextWrapper">
+            <button id="next" onclick="next()">Next ></button>
+        </div>
+        <div id="previousWrapper">
+            <button id="previous" onclick="previous()">&lt; Previous</button>
+        </div>
+        <div id="homeWrapper">
+            <button id="home" onclick="home()">Home</button>
+        </div>
+    </div>
+
+    <div id="evaluationWrapper">
+            <object id="evaluation" class="report" data="/home/deven/Documents/internship porfolio/reports/evaluation.pdf" type="application/pdf" width="50%" height="100%" ></object>
+            <div id="homeWrapper">
+                    <button id="home" onclick="home()">Home</button>
+            </div>
+        </div>
+    <script>
+        $('#reports').hide();
+        $('#weeklyreports').hide();
+        $('#journal').hide();
+        $('#previous').hide();
+        $('#next').hide();
+        $('#home').hide();
+        $('#report2').hide();
+        $('#report3').hide();
+        $('#evaluationWrapper').hide();
+
+        let count = 0;
+
+        function home(){
+            $('#reports').hide();
+            $('#evaluationWrapper').hide();
+            $('#weeklyreports').hide();
+            $('#journal').hide();
+            $('#home').hide();
+            $('#next').hide();
+            $('#previous').hide();
+            $('#main').show();
+            document.body.style.backgroundColor = 'white';
+        }
+
+        function reports(){
+            $('#reports').show();
+            $('#next').show();
+            $('#home').show();
+            $('#main').hide();
+            document.body.style.backgroundColor = 'black';
+        }
+
+        function weekly(){
+            $('#weeklyreports').show();
+            $('#home').show();
+            $('#main').hide();
+            document.body.style.backgroundColor = 'black';
+        }
+
+        function eval(){
+            $('#evaluationWrapper').show();
+            $('#home').show();
+            $('#main').hide();
+            document.body.style.backgroundColor = 'black';
+        }
+        function journal(){
+            $('#journal').show();
+            $('#home').show();
+            $('#main').hide();
+            document.body.style.backgroundColor = 'black';
+        }
+
+        function next(){
+            if(count <= 2){
+            count++;
+            }
+            if(count == 0){
+                $('#next').show();
+                $('#report1').show();
+                $('#report2').hide();
+                $('#report3').hide();
+            }
+            if(count == 1){
+                $('#report1').hide();
+                $('#report2').show();
+                $('#report3').hide();
+                $('#previous').show();
+            }
+            if(count == 2){
+                $('#report1').hide();
+                $('#report2').hide();
+                $('#report3').show();
+                $('#next').fadeOut();
+            }
+            console.log(count)
+        }
+
+        function previous(){
+            if(count <= 2){
+            count--;
+            }
+            if(count == 0){
+                $('#next').show();
+                $('#report1').show();
+                $('#report2').hide();
+                $('#report3').hide();
+                $('#previous').fadeOut();
+            }
+            if(count == 1){
+                $('#report1').hide();
+                $('#report2').show();
+                $('#report3').hide();
+            }
+            if(count == 2){
+                $('#report1').hide();
+                $('#report2').hide();
+                $('#report3').show();
+                $('#next').hide();
+            }
+            console.log(count)
+        }
+    
+    
+    </script>
+</body>
+</html>
