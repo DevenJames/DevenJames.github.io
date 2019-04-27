@@ -127,6 +127,11 @@
         margin-right: auto;
         text-align: center;
     }
+    #goalsWrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
     @media only screen and (max-width: 800px) {
     .report{
         width: 100%;
@@ -214,6 +219,16 @@
             <object class="report" data="journal.pdf" type="application/pdf" width="50%" height="100%" ></object>
         </div>
     </div>
+      <div id="goals">
+        <div id="goalsWrapper">
+          <ul>
+            <li>Gain professional work experience</li>
+            <li>Gain more competence in a professional setting.</li>
+            <li>Develop skills that could be added to my resume.</li>
+            <li>Learn more about what I do, and do not, want to do.</li>
+          </ul>
+        </div>
+    </div>
         <div id="nextWrapper">
             <button id="next" onclick="next()">Next ></button>
         </div>
@@ -279,6 +294,12 @@
         }
         function journal(){
             $('#journal').show();
+            $('#home').show();
+            $('#main').hide();
+            document.body.style.backgroundColor = 'black';
+        }
+        function journal(){
+            $('#goals').show();
             $('#home').show();
             $('#main').hide();
             document.body.style.backgroundColor = 'black';
